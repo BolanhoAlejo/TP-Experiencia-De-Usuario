@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulación</title>
+    <link rel="stylesheet" href="postular.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="destacadas.html">Ofertas Destacadas</a></li>
+                <li><a href="postular.html" class="active">Postular</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="postular">
+            <div class="form-container">
+                <h1>Formulario de Postulación</h1>
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                    <button type="submit" class="btn">Enviar Postulación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal de Empleo. Todos los derechos reservados.</p>
+    </footer>
+    <div id="loading-bar" class="hidden"></div>
+    <script src="loading-bar.js"></script>
+</body>
+</html>

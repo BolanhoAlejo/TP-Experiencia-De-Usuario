@@ -1,0 +1,183 @@
+/* Reset y estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos de la barra de navegación */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover, .nav-list .active {
+    background-color: #555;
+}
+
+/* Formulario */
+main {
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9ecef;
+}
+
+.postular h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #fff;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Estilos para los inputs y textarea */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Botón de envío */
+form button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de pie de página */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .postular h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-container {
+        padding: 2rem;
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #007bff; /* Cambia el color según tu diseño */
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.4s ease-out;
+  }
+  
+  #loading-bar.active {
+    width: 100%; /* Simula la barra llenándose */
+  }
+  
+  .hidden {
+    display: none; /* Oculta la barra cuando no esté en uso */
+  }
+  
