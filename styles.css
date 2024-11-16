@@ -88,6 +88,11 @@ header {
         text-align: center;
         width: 100%;
     }
+
+    .image-left, .image-right {
+        display: none;
+    }
+
 }
 
 main {
@@ -181,6 +186,11 @@ main {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+
+    .image-left, .image-right {
+        display: none;
+    }
+
 }
 
 @keyframes fadeIn {
@@ -242,4 +252,33 @@ main {
 
 .hidden {
     display: none;
+}
+
+.images-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-left, .image-right {
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
