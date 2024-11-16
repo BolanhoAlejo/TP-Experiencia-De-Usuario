@@ -40,14 +40,18 @@
         </nav>
     </header>    
     <main>
-        <section class="postulaciones">
-            <h1>Postulaciones Abiertas</h1>
-            <article class="postulacion">
-                <h2>Puesto: Desarrollador Frontend</h2>
-                <p>Descripción breve del puesto y requisitos.</p>
-                <a href="postular.html" class="btn">Postular</a>
-            </article>
-        </section>
+        <div class="images-container">
+            <img src="img2.png" alt="Imagen izquierda" class="fade-in image-left">
+            <section class="postulaciones fade-in">
+                <h1>Postulaciones Abiertas</h1>
+                <article class="postulacion">
+                    <h2>Puesto más solicitado: Desarrollador Frontend</h2>
+                    <p>Un desarrollador frontend es responsable de diseñar, desarrollar y optimizar interfaces web que garanticen una experiencia de usuario eficiente, atractiva y funcional. Colabora con equipos de diseño y backend para implementar soluciones alineadas con los objetivos del proyecto.</p>
+                    <a href="postular.html" class="btn">Postular</a>
+                </article>
+            </section>
+            <img src="img1.png" alt="Imagen derecha" class="fade-in image-right">
+        </div>
     </main>
     <div id="loading-bar" class="hidden"></div>
     <script src="loading-bar.js"></script>
@@ -60,6 +64,12 @@
                 navList.classList.toggle('active');
             });
         });
-    </script>    
+    </script>  
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const elements = document.querySelectorAll('.fade-in');
+                elements.forEach(el => el.classList.add('visible'));
+            });
+        </script>     
 </body>
 </html>
